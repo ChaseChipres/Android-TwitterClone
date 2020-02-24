@@ -3,10 +3,12 @@ package com.codepath.apps.restclienttemplate.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel
 public class Tweet {
 
     public String body;
@@ -14,6 +16,9 @@ public class Tweet {
     public User user;
     public long id;
 
+    public Tweet() {
+        // EMPTY CONSTRUCTOR NEEDED BY PARCEL
+    }
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException
     {
